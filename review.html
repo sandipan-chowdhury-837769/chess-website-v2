@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Match Review - Chess Website of Sandipan</title>
+    <!-- Local CSS files -->
+    <link rel="stylesheet" href="chessboard-1.0.0.min.css">
+    <link rel="stylesheet" href="review.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Left Panel: Chessboard -->
+        <div class="board-container">
+            <div class="board-panel">
+                <div id="board"></div>
+                <svg id="arrow-svg" viewBox="0 0 500 500" preserveAspectRatio="xMidYMid meet"></svg>
+            </div>
+        </div>
+
+        <!-- Right Panel: Review Details -->
+        <div class="control-panel">
+            <div id="review-play-page">
+                <h1>Match Review</h1>
+                
+                <div id="review-loading">
+                    <p style="text-align:center; margin-top: 40px; font-size: 18px;">
+                        Analyzing match...<br>0%
+                    </p>
+                </div>
+
+                <div id="review-play-content" class="hidden">
+                    <div class="review-stats stats">
+                        <!-- Stat block injected here -->
+                    </div>
+
+                    <div class="review-move-card">
+                        <span id="review-move-badge" class="badge"></span>
+                        <h2 id="review-move-title">Move Name</h2>
+                        <p id="review-move-desc">Explanation goes here.</p>
+                    </div>
+
+                    <div class="review-nav-buttons">
+                        <button id="btn-prev-move">Previous Move</button>
+                        <button id="btn-next-move">Next Move</button>
+                    </div>
+                    
+                    <button id="btn-exit-review" class="btn-resign" style="width: 100%; margin-top: 20px;">Exit Review</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Local JS files matching your zip directory -->
+    <script src="jquery.min.js"></script>
+    <script src="chessboard-1.0.0.min.js"></script>
+    <script src="chess.min.js"></script>
+    <script src="review.js"></script>
+</body>
+</html>
